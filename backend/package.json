@@ -1,10 +1,10 @@
 {
-  "name": "y",
+  "name": "author",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",

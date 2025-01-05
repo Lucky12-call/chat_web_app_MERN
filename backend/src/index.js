@@ -21,6 +21,7 @@ app.use(
 dotenv.config();
 const PORT = process.env.PORT;
 
+app.get("/", (req, res) => res.send(<h1>Chat app API Working</h1>))
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRouter);
 

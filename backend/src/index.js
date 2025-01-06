@@ -12,7 +12,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chat-web-app-mern-pcxy.vercel.app/",
+    origin: [
+      "https://chat-web-app-mern-pcxy.vercel.app",
+      "http://localhost:5173",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -21,7 +24,7 @@ app.use(
 dotenv.config();
 const PORT = process.env.PORT;
 
-app.get("/", (req, res) => res.send("Chat app API Working"));
+app.get("/", (_, res) => res.send("Chat app API Working"));
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRouter);
 

@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chat-web-app-mern-pcxy.vercel.app", // Allow your frontend origin
+    origin: ["https://chat-web-app-mern-pcxy.vercel.app", "http://localhost:5173"],
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-    credentials: true, // If you're using cookies or authentication headers
+    credentials: true,
   })
 );
 
